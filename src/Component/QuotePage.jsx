@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import "./Button.css"
 
 function QuotePage() {
     const [quote, setQuote] = useState("")
@@ -18,9 +19,11 @@ function QuotePage() {
         // }
     }
     return (
-        <div>
-            <button onClick={clickButton} >Quote For You</button>
-            <h1>{quote}</h1>
+        <div className='button' >
+            <div className='btn-box' >
+                <button className='btn' onClick={clickButton}  >Quote For You</button  >
+                <h1 className='para' >{quote}</h1>
+            </div>
         </div>
     )
 }
