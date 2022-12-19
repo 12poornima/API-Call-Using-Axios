@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import "./Button.css"
 
 function QuotePage() {
     const [quote, setQuote] = useState("")
+    useEffect(() => {
+        clickButton()
+    }, [])
     // let allQuotes = ["Quote1", "Quote2", "Quote3"]
     const [count, setCount] = useState(0)
     async function clickButton() {
